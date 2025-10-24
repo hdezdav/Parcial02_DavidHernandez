@@ -10,12 +10,12 @@ def calcular_factorial(n):
     return math.factorial(n)
 
 def es_par(n):
-    # Ver si es numero es par
+    # Ver si el numero es par
     return n % 2 == 0
 
 @app.route('/factorial/<int:numero>', methods=['GET'])
 def obtener_factorial(numero):
-    # Endpoint que recibe un numero y devuelve su factorial y si es par o impar
+    # Endpoint que recibe un numero, devuelve su factorial y si es par o impar
     factorial = calcular_factorial(numero)
     
     if factorial is None:
